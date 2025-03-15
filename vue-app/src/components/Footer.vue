@@ -27,7 +27,7 @@
             <li><a href="#" class="hover:underline">Tentang Kami</a></li>
             <li><a href="#" class="hover:underline">Liputan Media</a></li>
             <li><a href="#" class="hover:underline">Donasi Sekarang</a></li>
-            <li><a href="#" class="hover:underline">Donatur</a></li>
+            <li><a href="#" class="hover:underline">Sponsor</a></li>
             <li><a href="#" class="hover:underline">Kontak Kami</a></li>
           </ul>
         </div>
