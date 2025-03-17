@@ -1,11 +1,19 @@
 <script setup>
-// Anda bisa menambahkan logika navigasi di sini jika diperlukan
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
 const navItems = [
-  { name: 'Beranda', path: '#' },
+  { name: 'Beranda', path: '/' },
   { name: 'Cari Aktivitas', path: '#about' },
   { name: 'Cari Organisasi', path: '#kategori' },
   { name: 'Tentang Kami', path: '#kontak' }
-]
+];
+
+const router = useRouter();
+
+const goToLogin = () => {
+  router.push('/login');
+};
 </script>
 
 <template>
@@ -19,19 +27,19 @@ const navItems = [
       
       <!-- Navigation Links -->
       <div class="hidden md:flex space-x-8">
-        <a 
+        <router-link 
           v-for="item in navItems" 
           :key="item.name" 
-          :href="item.path"
+          :to="item.path"
           class="text-gray-700 hover:text-blue-900 transition-colors"
         >
           {{ item.name }}
-        </a>
+        </router-link>
       </div>
       
       <!-- Login/Register Buttons -->
       <div class="flex space-x-4">
-        <button class="px-4 py-2 text-blue-900 font-medium hover:text-blue-700 transition-colors">
+        <button @click="goToLogin" class="px-4 py-2 text-blue-900 font-medium hover:text-blue-700 transition-colors">
           Masuk
         </button>
         <button class="px-4 py-2 bg-blue-900 text-white font-medium rounded-lg hover:bg-blue-800 transition-colors">
