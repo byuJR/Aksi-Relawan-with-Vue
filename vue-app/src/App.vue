@@ -1,9 +1,5 @@
 <script setup>
 import NavBar from './components/NavBar.vue'
-import HeroSection from './components/HeroSection.vue'
-import FeatureCards from './components/FeatureCards.vue'
-import CategorySection from './components/CategorySection.vue'
-import AksiSection from './components/AksiSection.vue'
 import Footer from './components/Footer.vue'
 </script>
 
@@ -11,10 +7,7 @@ import Footer from './components/Footer.vue'
   <div>
     <NavBar />
     <div class="container mx-auto">
-      <HeroSection />
-      <FeatureCards />
-      <CategorySection />
-      <AksiSection />
+      <router-view />
     </div>
     <Footer />
   </div>
